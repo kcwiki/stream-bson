@@ -1,7 +1,7 @@
 {
   "name": "stream-bson",
-  "version": "1.0.0",
-  "description": "BSON stream with rudimentary archive support",
+  "version": "1.0.2",
+  "description": "Streaming BSON parser with rudimentary MongoDB archive support",
   "license": "MIT",
   "repository": "gakada/stream-bson",
   "scripts": {
@@ -11,9 +11,11 @@
     "index.js"
   ],
   "keywords": [
-    "bson",
     "stream",
-    "parser"
+    "bson",
+    "parser",
+    "mongodb",
+    "archive"
   ],
   "dependencies": {
     "bson": "^3.0.2"
