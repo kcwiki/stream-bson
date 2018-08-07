@@ -1,0 +1,21 @@
+{
+  "name": "stream-bson",
+  "version": "1.0.0",
+  "description": "BSON stream with rudimentary archive support",
+  "license": "MIT",
+  "repository": "gakada/stream-bson",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "bson",
+    "stream",
+    "parser"
+  ],
+  "dependencies": {
+    "bson": "^3.0.2"
+  }
+}
