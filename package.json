@@ -1,15 +1,7 @@
 {
   "name": "stream-bson",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Streaming BSON parser with rudimentary MongoDB archive support",
-  "license": "MIT",
-  "repository": "gakada/stream-bson",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "files": [
-    "index.js"
-  ],
   "keywords": [
     "stream",
     "bson",
@@ -17,7 +9,34 @@
     "mongodb",
     "archive"
   ],
+  "license": "MIT",
+  "author": "gakada (https://github.com/gakada)",
+  "contributors": [],
+  "homepage": "https://github.com/kcwiki/stream-bson#readme",
+  "bugs": "https://github.com/kcwiki/stream-bson/issues",
+  "repository": "kcwiki/stream-bson",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "bin": {},
+  "scripts": {
+    "format": "prettier --loglevel warn --write '**/*.{js,json,md,ts,yaml,yml}'",
+    "lint": "eslint . --fix",
+    "test": "yarn format && yarn lint && tape test",
+    "prepack": "yarn test",
+    "up": "yarn upgrade --latest"
+  },
   "dependencies": {
-    "bson": "^3.0.2"
+    "bson": "^4.0.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "multistream": "^4.0.0",
+    "prettier": "^1.18.2",
+    "tape": "^4.11.0"
   }
 }

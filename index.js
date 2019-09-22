@@ -1,6 +1,5 @@
 const { Transform } = require('stream')
 const BSON = require('bson')
-const bson = new BSON()
 
 const idPrefix = Buffer.from('\x07_id')
 
@@ -39,7 +38,7 @@ class StreamBSON extends Transform {
       //
     }
     try {
-      this.push(bson.deserialize(docBuffer))
+      this.push(BSON.deserialize(docBuffer))
     } catch (err) {
       cb(this._archive ? undefined : err)
       return

@@ -1,0 +1,10 @@
+{
+  "env": { "es6": true, "node": true },
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "parser": "babel-eslint",
+  "rules": {
+    "complexity": ["error", 10],
+    "max-depth": ["error", 3],
+    "max-params": ["error", 3]
+  }
+}
