@@ -1,6 +1,6 @@
 {
   "name": "stream-bson",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Streaming BSON parser with rudimentary MongoDB archive support",
   "keywords": [
     "stream",
@@ -21,22 +21,52 @@
   ],
   "bin": {},
   "scripts": {
-    "format": "prettier --loglevel warn --write '**/*.{js,json,md,ts,yaml,yml}'",
+    "format": "prettier --log-level warn --write '**/*.{js,json,md,ts,yaml,yml}'",
     "lint": "eslint . --fix",
-    "test": "yarn format && yarn lint && tape test",
+    "test": "yarn format && yarn lint && node test",
     "prepack": "yarn test",
     "up": "yarn upgrade --latest"
   },
   "dependencies": {
-    "bson": "^4.0.2"
+    "bson": "^6.0.0"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.4.0",
-    "eslint-config-prettier": "^6.3.0",
-    "eslint-plugin-prettier": "^3.1.1",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
     "multistream": "^4.0.0",
-    "prettier": "^1.18.2",
-    "tape": "^4.11.0"
+    "prettier": "^3.0.2"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:prettier/recommended"
+    ],
+    "rules": {
+      "complexity": [
+        "error",
+        10
+      ],
+      "max-depth": [
+        "error",
+        3
+      ],
+      "max-params": [
+        "error",
+        3
+      ]
+    },
+    "root": true
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "printWidth": 150,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all"
   }
 }

@@ -1,9 +1,6 @@
 # `stream-bson`
 
 [![Version](https://img.shields.io/npm/v/stream-bson.svg)](https://www.npmjs.com/package/stream-bson)
-[![Build](https://img.shields.io/travis/kcwiki/stream-bson.svg)](https://travis-ci.org/kcwiki/stream-bson)
-[![Dependencies](https://img.shields.io/david/kcwiki/stream-bson.svg)](https://david-dm.org/kcwiki/stream-bson)
-[![Dev Dependencies](https://img.shields.io/david/dev/kcwiki/stream-bson.svg)](https://david-dm.org/kcwiki/stream-bson?type=dev)
 
 [Streaming](https://nodejs.org/api/stream.html) [BSON](http://bsonspec.org/) parser with [rudimentary](#todo) MongoDB [archive](https://www.mongodb.com/blog/post/archiving-and-compression-in-mongodb-tools) support.
 

@@ -44,7 +44,7 @@ class StreamBSON extends Transform {
       return
     }
     this._buffer = this._buffer.slice(docSize)
-    this._parse(cb)
+    process.nextTick(() => this._parse(cb))
   }
   _transform(chunk, _, cb) {
     this._buffer = Buffer.concat([this._buffer, chunk], this._buffer.length + chunk.length)
